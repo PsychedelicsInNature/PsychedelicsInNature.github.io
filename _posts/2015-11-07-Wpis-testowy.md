@@ -8,5 +8,5 @@ table: ['one','two','three']
 ![Photo]({{page.image}})
 
 {% for item in page.table%}
-  {{item}
+  {{item}}
 {% endfor%}
