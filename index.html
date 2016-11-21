@@ -1,0 +1,67 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#<div class="container">
+#  <div class="row">
+#    <div class="red yellow-text col s12 m6 l3">
+#      <h3>NIC</h3>
+#    </div>
+#    <div class="yellow red-text col s12 m6 l3">
+#      <h3>NIC</h3>
+#    </div>
+#    <div class="teal white-text col s12 m6 l3">
+#      <h3>NIC</h3>
+#    </div>
+#    <div class="amber white-text col s12 m6 l3">
+#      <h3>NIC</h3>
+#    </div>
+#  </div>
+#  </div>
+
+layout: home
+---
+
+  <div class="row">
+    {% for post in site.posts%}
+        <div class="col s12 m7">
+          <div class="card large">
+            <div class="card-image">
+              <img src="{{post.image}}">
+              <span class="card-title">{{post.title}}</span>
+            </div>
+          <!--  <div class="card-content">
+              <p>{{post.excerpt}}</p>
+           </div>-->
+            <div class="card-action">
+              <a href="{{post.url}}">POST</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <footer class="page-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Psychedelics In Nature</h5>
+                  <p class="grey-text text-lighten-4">To juz koniec strony</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">Links</h5>
+                  <ul>
+                    {% for post in site.posts %}
+                      <li><a class="grey-text text-lighten-3" href="{{post.url}}">Link </a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2016 MPJ
+              <a class="grey-text text-lighten-4 right" href="http://google.com">More Links</a>
+              </div>
+            </div>
+          </footer>
